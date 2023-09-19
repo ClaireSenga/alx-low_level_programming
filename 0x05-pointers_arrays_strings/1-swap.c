@@ -6,8 +6,7 @@
  * @b: The second integer to be swapped.
  */
 
-void swap_int(int *a, int *b);
-
+void swap_int(int *a, int *b)
 {
 	int m;
 
