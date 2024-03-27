@@ -1,0 +1,10 @@
+// C program that shows putchar() method
+#include <stdio.h>
+int main()
+{
+// Get char to be written
+char ch = 'G';
+// Write the Char to stdout
+putchar(ch);
+return (0);
+}
