@@ -14,13 +14,13 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	gcc -o $(TARGET) $(OBJS)
 
-# The rule to build the object files
+# The rule to build the object files.
 main.o: main.c
 	gcc -c main.c -o main.o
 
 utils.o: utils.c
 	gcc -c utils.c -o utils.o
 
-# The rule to clean the build files
+# The rule to clean the build files.
 clean:
 	rm -f $(TARGET) $(OBJS)
