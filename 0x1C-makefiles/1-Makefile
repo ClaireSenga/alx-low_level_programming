@@ -1,0 +1,19 @@
+# Define the compiler.
+CC = gcc
+
+# Define source files.
+SRC = main.c utils.c
+
+# Define the target executable.
+TARGET = school
+
+# The 'all' rule builds the executable.
+all: $(TARGET)
+
+# The rule to build the target executable.
+$(TARGET): $(SRC)
+	$(CC) -o $(TARGET) $(SRC)
+
+# The rule to clean the build files.
+clean:
+	rm -f $(TARGET)
