@@ -1,7 +1,7 @@
-/* the executable target*/
+# the executable target.
 TARGET = school
 
-/* source files */
+# source files
 SRCS = main.c utils.c
 
 # Object files.
