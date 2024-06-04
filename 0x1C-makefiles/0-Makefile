@@ -1,26 +1,2 @@
-# the executable target.
-TARGET = school
-
-# source files
-SRCS = main.c utils.c
-
-# Object files.
-OBJS = main.o utils.o
-
-# Default rule.
-all: $(TARGET)
-
-# The rule to build the target executable.
-$(TARGET): $(OBJS)
-	gcc -o $(TARGET) $(OBJS)
-
-# The rule to build the object files.
-main.o: main.c
-	gcc -c main.c -o main.o
-
-utils.o: utils.c
-	gcc -c utils.c -o utils.o
-
-# The rule to clean the build files.
-clean:
-	rm -f $(TARGET) $(OBJS)
+all: main.c school.c
+	gcc main.c school.c -o school
