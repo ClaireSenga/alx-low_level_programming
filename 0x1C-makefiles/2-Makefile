@@ -1,26 +1,12 @@
-# Define the compiler.
-CC = gcc
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-# Define source files.
-SRC = main.c utils.c
-
-# Define object files (derived from the source files)
-OBJ = $(SRC:.c=.o)
-
-# Define name of the executable.
-NAME = school
-
-# The 'all' rule builds the executable.
-all: $(NAME)
-
-# The rule to build the target executable.
-$(NAME): $(OBJ)
-	$(CC) -o $(NAME) $(OBJ)
-
-# The rule to build the object files.
-%.o: %.c
-	$(CC) -c $< -o $@
-
-# The rule to clean the build files.
 clean:
-	rm -f $(NAME) $(OBJ)
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
